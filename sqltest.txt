@@ -1,0 +1,11 @@
+1.select r.date, r.description
+from vote as v natural join resolution natural join votetype natural join country
+where 
+
+from ((vote as v join resolution as r on v.rollcallid = r.rollcallid)as t1 join votetype as vt on t1.votecode = vt.votecode ) as t2  join country as c on t2.countrycode = c.countrycode
+
+from vote as v join resolution as r on v.rollcallid = r.rollcallid join votetype as vt on v.votecode = vt.votecode join country as c on v.countrycode = c.countrycode
+
+can solve 3
+
+
